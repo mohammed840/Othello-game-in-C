@@ -1,0 +1,13 @@
+- Board is an entity, which has 8x8 cells
+- A cell is essentially a representation of color, which is present in it
+- A player has a name, some score and also a color assigned to it
+- On start, every cell of board is 'EMPTY'
+- The game loop continues, if at least one player has left with valid moves
+- On request of each move, it is only approved, if after adding it, at least
+  one disc of other color changes to player colors.
+- At each move, all 8 possible directions are checked, if any change is possible
+- In each direction, first we start counting the opponent's color in path
+- If an empty cell is encoutered, this means that there is no adjacent same color,
+  so we can skip this direction
+- If the same color is encountered, only insert new disc, if the count of opponent's
+  color is at least one in this direction.
